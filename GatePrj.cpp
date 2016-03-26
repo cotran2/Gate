@@ -103,8 +103,8 @@ BOOL CGatePrjApp::InitInstance()
 
 	// Dispatch commands specified on the command line.  Will return FALSE if
 	// app was launched with /RegServer, /Register, /Unregserver or /Unregister.
-	if (!ProcessShellCommand(cmdInfo))
-		return FALSE;
+// 	if (!ProcessShellCommand(cmdInfo))
+// 		return FALSE;
 	// The main window has been initialized, so show and update it
 	pMainFrame->ShowWindow(SW_SHOWMAXIMIZED);
 	pMainFrame->UpdateWindow();
