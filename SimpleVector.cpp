@@ -117,6 +117,14 @@ double Alpha(CSimpleVector& v, CSimpleVector& w)
 	return acos(V/L);
 }
 
+CSimpleVector operator*(double c, const CSimpleVector& w)
+{
+	CSimpleVector v;
+	v.x = c*w.x;
+	v.y = c*w.y;
+	return v;
+}
+
 CSimpleVector operator*(const CSimpleVector& w, double c)
 {
 	CSimpleVector v;

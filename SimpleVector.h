@@ -25,7 +25,7 @@ public:
 	CSimpleVector& operator/=(double c);
 	CSimpleVector& operator+=(const CSimpleVector& w);
 	CSimpleVector& operator-=(const CSimpleVector& w);
-	CSimpleVector& operator =(const CSimpleVector& w);
+	CSimpleVector& operator =(const CSimpleVector &w);
 	void Normalize();
 	double Length2();
 	double Length();
@@ -34,6 +34,7 @@ public:
 	friend double Length(const CSimpleVector& v);
 	friend double Alpha(const CSimpleVector& v, const CSimpleVector& w);
 	// friend operators
+	friend CSimpleVector operator*(double c, const CSimpleVector& w);
 	friend CSimpleVector operator*(const CSimpleVector& w, double c);
 	friend CSimpleVector operator/(const CSimpleVector& w, double c);
 	friend CSimpleVector operator+(const CSimpleVector& v, const CSimpleVector& w);

@@ -40,7 +40,9 @@
 
 
 
+#define PI	3.14159265358979323846
 
+#define VEHICLE_OBJECT_TIMER 1
 
 
 
