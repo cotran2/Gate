@@ -278,8 +278,8 @@ bool CGatePrjDoc::InitVehicles()
 	static Random r;
 	int nVelocity;
 
-	nVehicles = 2;
-	nVelocity = 120;
+	nVehicles = 3;
+	nVelocity = 300;
 	pPts = m_parrPts->GetData();
 	m_parrVehicles = new CArray<CVehicleObjectByPath*>;
 	nParts = m_parrPts->GetSize() - 1;
@@ -397,7 +397,7 @@ void CGatePrjDoc::DrawGateAmount(CDC *pDC)
 	{
 		pGate = m_parrGates->GetAt(i);
 
-		strText.Format(_T("%d___%d"), pGate->m_nId, pGate->m_nCount);
+		strText.Format(_T("Station :%d, charge times: %d"), pGate->m_nId, pGate->m_nCount);
 		pDC->TextOut(pGate->m_segOrthor.p2.x + 10, pGate->m_segOrthor.p2.y + 10, strText);
 	}
 
@@ -482,7 +482,7 @@ void CGatePrjDoc::DrawVehicles(CDC *pDC)
 			pDC->SelectObject(&penV);
 			pDC->Ellipse(vP.x - nRadius, vP.y - nRadius, vP.x + nRadius, vP.y + nRadius);
 //					DrawVehicleObjectHeading(pTransform, pDC, pVO);
-			strText.Format(_T("%d___%d"), i, paVOs[i]->m_nCount);
+			strText.Format(_T("Car %d, charge times : %d"), i, paVOs[i]->m_nCount);
 			pDC->TextOut(vP.x - 10, vP.y - 10, strText);
 		}
 		pDC->SelectObject(pOldPen);
